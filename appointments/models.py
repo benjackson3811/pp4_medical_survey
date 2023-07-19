@@ -26,24 +26,35 @@ TIME_CHOICES = (
     ("1:30 PM", "1:30 PM"),
 )
 
-STATUS = ((0, "DRAFT"), (1, "PUBLISHED"))
+STATUS = (
+    (0, ""),
+    (1, "Just Recruited"),
+    (2, "Completed First Appointment"),
+    (3, "Completed Second Appointment")
+)
 
-STAFF = ((0, ""), (1, "NO"), (2, "YES"))
+APPOINTMENT_NUMBER = (
+    ("Inital Appointment", "Inital Appointment"),
+    ("Follow Up Appointment", "Follow Up Appointment"),
+    ("Final Results", "Final Results"),
+    )
 
 
 class Appointment(models.Model):
-    patient_ID = models.CharField(max_length=10, null=False, blank=False, default="")
+    patient_ID = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="full_name")
     slug = models.SlugField(max_length=200, unique=True)
-    first_name = models.CharField(max_length=80, null=False, blank=False)
-    last_name = models.CharField(max_length=80, null=False, blank=False)
-    Gender = models.CharField(max_length=50, choices=GENDER, default="")
-    referred = models.CharField(max_length=50, choices=REFERRED, default="")
-    content = models.TextField()
+    full_name = models.CharField(max_length=80, null=False, blank=False)
+    gender = models.CharField(max_length=50, choices=GENDER, default="")
+    address = models.CharField(max_length=200, null=False, default="")
+    appointment_number = models.CharField(
+        max_length=50, choices=APPOINTMENT_NUMBER, default="")
+    appointment_notes = models.CharField(max_length=200, null=False, default="")
     updated_on = models.DateTimeField(auto_now=True)
     day = models.DateField(default=datetime.now)
-    time = models.CharField(max_length=10, choices=TIME_CHOICES, default="9 AM")
+    time = models.CharField(
+        max_length=10, choices=TIME_CHOICES, default="9 AM")
     created_on = models.DateTimeField(auto_now_add=True)
-    staff_member = models.ForeignKey(User, on_delete=models.CASCADE, choices=STAFF, default="")
     status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
@@ -57,13 +68,20 @@ class Appointment(models.Model):
 
 
 class Comments(models.Model):
-    patient_ID = models.CharField(max_length=10, null=False, blank=False, default="")
+    patient_ID = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="appointment_number")
     slug = models.SlugField(max_length=200, unique=True)
-    first_name = models.CharField(max_length=80, null=False, blank=False)
-    last_name = models.CharField(max_length=80, null=False, blank=False)
-    Gender = models.CharField(max_length=50, choices=GENDER, default="")
-    referred = models.CharField(max_length=50, choices=REFERRED, default="")
-    content = models.TextField()
+    full_name = models.CharField(max_length=80, null=False, blank=False)
+    gender = models.CharField(max_length=50, choices=GENDER, default="")
+    appointment_number = models.CharField(
+        max_length=50, choices=APPOINTMENT_NUMBER, default="")
+    appointment_notes = models.CharField(max_length=200, null=False, default="")
     created_on = models.DateTimeField(auto_now_add=True)
+    image = CloudinaryField('image', default='placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
-    staff_member = models.ForeignKey(User, on_delete=models.CASCADE, choices=STAFF, default="")
+
+    class Meta:
+        ordering = ['-appointment_number']
+
+    def __str__(self):
+        return self.patient_ID
