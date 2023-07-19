@@ -30,21 +30,39 @@ STATUS = ((0, "DRAFT"), (1, "PUBLISHED"))
 
 
 class Appointment(models.Model):
-    patient_ID = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    refferred = models.CharField(max_length=50, choices=REFERRED, default="")
+    patient_ID = models.ForeignKey(User, on_delete=DO_NOTHING, null=True, blank=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    first_name = models.Charfield(max_length=80, null=False, blank=False)
+    last_name = models.Charfield(max_length=80, null=False, blank=False)
+    Gender = models.CharField(max_length=50, choices=GENDER, default="")
+    referred = models.CharField(max_length=50, choices=REFERRED, default="")
+    content = models.TextField()
+    updated_on = models.DateTimeField(auto_now=True)
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=TIME_CHOICES, default="9 AM")
-    time_ordered = models.DateTimeField(default=datetime.now, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    featured_image = CloudinaryField('image', default='placeholder')
     status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
         return f"{self.user.patient_ID} | day: {self.day} | time: {self.time}"
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-date_time']
 
     def __str__(self):
         return self.patient_ID
 
+
+class Comments(models.model):
+    patient_ID = models.ForeignKey(User, on_delete=DO_NOTHING, null=True, blank=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    first_name = models.Charfield(max_length=80, null=False, blank=False)
+    last_name = models.Charfield(max_length=80, null=False, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    class Meta:
+        ordering = ['-date_time']
+
+    def __str__(self):
+        return self.patient_ID
