@@ -41,9 +41,10 @@ APPOINTMENT_NUMBER = (
 
 
 class Appointment(models.Model):
-    patient_ID = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="full_name")
+    patient_ID = models.CharField(max_length=80, null=False, blank=False)
     slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="appointment_number", default="")
     full_name = models.CharField(max_length=80, null=False, blank=False)
     gender = models.CharField(max_length=50, choices=GENDER, default="")
     address = models.CharField(max_length=200, null=False, default="")
@@ -68,9 +69,10 @@ class Appointment(models.Model):
 
 
 class Comments(models.Model):
-    patient_ID = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="appointment_number")
+    patient_ID = models.CharField(max_length=80, null=False, blank=False)
     slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='appointment_notes', default="")
     full_name = models.CharField(max_length=80, null=False, blank=False)
     gender = models.CharField(max_length=50, choices=GENDER, default="")
     appointment_number = models.CharField(
