@@ -10,7 +10,7 @@ REFERRED = (
 )
 
 GENDER = (
-    (0, ""), (1, "FEMALE"), (2, "MALE"), (3, "OTHER")
+    ("", ""), ("FEMALE", "FEMALE"), ("MALE", "MALE"), ("OTHER", "OTHER")
 )
 
 TIME_CHOICES = (
@@ -46,7 +46,7 @@ class Appointment(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="appointment_number", default="")
     full_name = models.CharField(max_length=80, null=False, blank=False)
-    gender = models.CharField(max_length=50, choices=GENDER, default="")
+    gender = models.CharField(max_length=10, choices=GENDER, default="")
     address = models.CharField(max_length=200, null=False, default="")
     appointment_number = models.CharField(
         max_length=50, choices=APPOINTMENT_NUMBER, default="")
@@ -68,7 +68,7 @@ class Appointment(models.Model):
         return self.patient_ID
 
 
-class Comments(models.Model):
+class Comment(models.Model):
     patient_ID = models.CharField(max_length=80, null=False, blank=False)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
