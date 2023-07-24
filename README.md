@@ -107,7 +107,7 @@ Generate through [Coolors](https://coolors.co/) the colour picked in the palette
 
 ### Typography
 
-Caveat: chosen as primary font because its is clear and elegant. The typed letters are easy to read.
+Open Sans: chosen as primary font because its is clear and elegant. The typed letters are easy to read.
 
 Raleway: chosen for headings because it pairs well with the Caveat font.
 
@@ -142,7 +142,26 @@ The languages used in this project are:
 - [Elephant SQL](https://www.elephantsql.com/) Postgres SQL as a Service.
 - [Cloudinary](https://cloudinary.com/) Free Media Management System.
 - [Coolors](https://coolors.co/) Online Colour Palette generator
+- [Pexels](https://www.pexels.com/)Free stock photos.
 
 ### Deployment
 
 The development environment used for this project was Gitpod. Regular commits and pushes to Github have been employed to be able to track and trace the development process of the website, as well as the creation of a separate branches to be able control the development process of the project using pull requests.
+
+
+ ### Local Development
+#### How to Fork
+#### How to Clone
+
+### Testing 
+
+ ### Credits
+#### Code Used
+
+- [I think therefore i Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) - Introduction to Django walkthrough.
+- [Dev Genuis](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)- Help with designing the booking system.
+- [CSE Stack](https://www.csestack.org/create-html-form-insert-data-database-django/#Step_4_Create_Form_to_Take_the_User_Input) Creating a form in Django
+- [Simple is better than Complex](https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html) How to use a date picker in Django
+- [Codemy.com](https://www.youtube.com/watch?v=6-XXvUENY_8)-Style Django Forms With Bootstrap - Django Blog #5.
+- [Djangoproject](https://docs.djangoproject.com/en/4.2/topics/email/)- Sending email through Django.
+- [geeksforgeeks](https://www.geeksforgeeks.org/setup-sending-email-in-django-project/) - Tutorial for sending emails in a Django project.
