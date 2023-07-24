@@ -1,10 +1,28 @@
+/* main body */
+
 body {
     background: linear-gradient(120deg, #d7d0c8, #f87666);
     margin: 0;
-  padding: 0;
+    padding: 0;
 }
+
+/*Navigation */
 
 .brand {
     font-family: Railway, Arial, sans-serif;
     color: #95a78d;
 }
+
+
+/*Hero Image */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* About section*/
+
+.accordion-item {
+    border-style: outset;
+}
+

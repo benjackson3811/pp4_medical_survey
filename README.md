@@ -165,3 +165,4 @@ The development environment used for this project was Gitpod. Regular commits an
 - [Codemy.com](https://www.youtube.com/watch?v=6-XXvUENY_8)-Style Django Forms With Bootstrap - Django Blog #5.
 - [Djangoproject](https://docs.djangoproject.com/en/4.2/topics/email/)- Sending email through Django.
 - [geeksforgeeks](https://www.geeksforgeeks.org/setup-sending-email-in-django-project/) - Tutorial for sending emails in a Django project.
+- [QuestionPro](https://www.questionpro.com/blog/health-survey/#:~:text=A%20health%20survey%20is%20a,a%20community%20acts%20towards%20health.)Sample information on a health survey.
