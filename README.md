@@ -124,12 +124,16 @@ Raleway: chosen for headings because it pairs well with the Caveat font.
 
 ### Imagery
 [Back to Top](<## CONTENTS>)
+
 ### Wireframes
-[Back to Top](<## CONTENTS>)
-### ERP Database model
 
 [Back to Top](<## CONTENTS>)
+
+### ERP Database model
+[Back to Top](<## CONTENTS>)
+
 ## Languages and libraries used
+
 [Back to Top](<## CONTENTS>)
 ### Languages
 
@@ -139,6 +143,7 @@ The languages used in this project are:
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
+
 [Back to Top](<## CONTENTS>)
 ### Libraries and other resources
 
