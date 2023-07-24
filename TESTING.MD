@@ -1,8 +1,8 @@
-#  Patients Survey
+#  Patients Survey Testing.MD
 
 [Back to README.md](<#  Patients Survey>)
 
-## PAGE CONTENTS
+## [PAGE CONTENTS](#page_contents)
 
  * [Testing User Stories](#testing_user_stories)
  * [Code Validation](#code_validation)
@@ -95,10 +95,10 @@
  [] Site Admin has finally approval
 
 
-[Back to Top](<## PAGE CONTENTS>)
+[Back to Top](#page_contents)
 
  ## Additional Testing
-[Back to Top](<## PAGE CONTENTS>)
+[Back to Top](#page_contents)
 
 In addition to tests stated above I have performed a series of manual tests. Below the list of tests that has been conducted can be found.
 
@@ -136,10 +136,10 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 ### WAVE
 
  ## Fixed Bugs
- [Back to Top](<## PAGE CONTENTS>)
+ [Back to Top](#page_contents)
 
  ## Unfixed Bugs
- [Back to Top](<## PAGE CONTENTS>)
+ [Back to Top](#page_contents)
 
   ## Code Validation
 - HTML
@@ -147,4 +147,4 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 - JShint
 - Python linter
 
-[Back to Top](<## PAGE CONTENTS>)
+[Back to Top](#page_contents)

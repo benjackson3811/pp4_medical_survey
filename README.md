@@ -1,11 +1,10 @@
 #  Patients Survey
 
-Patients Survey is a responsive website for a fictional medical survey. It allows the user to view inputted patient details, view the calendar of appointments and make appointments for a patient’s repeat visit.
+[Website image]()
 ---
 
-## CONTENTS
+## [CONTENTS](#table_of_contents)
 
- * [Problem Statement](#problem-statement)
  * [Object_of_the_website](#object-of-the-website)
 
 * [UX](#UX)
@@ -44,10 +43,10 @@ Patients Survey is a responsive website for a fictional medical survey. It allow
   * [Acknowledgments](#acknowledgments)
 
 ---
-## Problem statement
-How do I develop an app for medical survey patient detail storage that provides all this functionality to the user?
-[Back to Top](<## CONTENTS>)
-### Object of the Website
+
+Patients Survey is a responsive website for a fictional medical survey. It allows the user to view inputted patient details, view the calendar of appointments and make appointments for a patient’s repeat visit.
+
+## Object of the Website
 
 Patient Survey Storage is a responsive website for a medical survey. It allows the user to view inputted patient details, view the calendar of appointments and make appointments for a patient’s repeat visit.
 
@@ -62,7 +61,7 @@ The users will be able to;
 
 
 ## UX
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
 ### Target audience
 
 The primary users of the survey of the planner will be;
@@ -89,7 +88,8 @@ Data Scientist/ Researcher.
 -View the participant data if they are on the survey.
 - Export the data.
 -To analysis/ view trends
-[Back to Top](<## CONTENTS>)
+
+[Back to Top](#table_of_contents)
 
 ### User Stories
 
@@ -107,15 +107,18 @@ Data Scientist/ Researcher.
  12. As a Site User, I want to be able to delete incorrectly added data, so that I can ensure correct data is added to survey  [#13](https://github.com/benjackson3811/pp4_medical_survey/issues/13)
  13. As a Site Admin, I want to be able to approve which patient data is deleted, so that I can ensure there is an audit trail. [#14](https://github.com/benjackson3811/pp4_medical_survey/issues/14)
 
-The user stories are further detailed in the [TESTING.md]. The user acceptance criteria is defined.
+The user stories are further detailed in the [TESTING.md](TESTING.MD). The user acceptance criteria is defined.
 
 Please note the numbering of the user stories does not match the user story in GitHub. This is due to the first user story being created in error. 
-[Back to Top](<## CONTENTS>)
-### colour-scheme
-![View the Website Colour Scheme](static/images/readme_images/coolors_color_schema)
+[Back to Top](#table_of_contents)
 
-Generate through [Coolors](https://coolors.co/) the colour picked in the palette are accessible, bold and work well together. They allow the website user to easily read and understand the writen information. 
-[Back to Top](<## CONTENTS>)
+### colour-scheme
+![Coolors Colour Scheme](/static/images/readme_images/coolors_color_schema.png)
+
+Generated through [Coolors](https://coolors.co/) the colour picked in the palette are accessible, bold and work well together. They allow the website user to easily read and understand the writen information. 
+
+[Back to Top](#table_of_contents)
+
 ### Typography
 
 Open Sans: chosen as primary font because its is clear and elegant. The typed letters are easy to read.
@@ -123,18 +126,17 @@ Open Sans: chosen as primary font because its is clear and elegant. The typed le
 Raleway: chosen for headings because it pairs well with the Caveat font.
 
 ### Imagery
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
 
 ### Wireframes
 
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
 
 ### ERP Database model
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
 
 ## Languages and libraries used
 
-[Back to Top](<## CONTENTS>)
 ### Languages
 
 The languages used in this project are:
@@ -144,7 +146,8 @@ The languages used in this project are:
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
 
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
+
 ### Libraries and other resources
 
 - [Django](https://www.djangoproject.com/) Django is a high-level Python web framework
@@ -161,23 +164,31 @@ The languages used in this project are:
 - [Cloudinary](https://cloudinary.com/) Free Media Management System.
 - [Coolors](https://coolors.co/) Online Colour Palette generator
 - [Pexels](https://www.pexels.com/)Free stock photos.
-[Back to Top](<## CONTENTS>)
+
+[Back to Top](#table_of_contents)
+
 ### Deployment
 
 The development environment used for this project was Gitpod. Regular commits and pushes to Github have been employed to be able to track and trace the development process of the website, as well as the creation of a separate branches to be able control the development process of the project using pull requests.
 
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
+
  ### Local Development
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
+
 #### How to Fork
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
+
 #### How to Clone
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
+
 ### Testing 
 Please see [TESTING.md](TESTING.MD) for all testing performed
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
+
  ### Credits
- [Back to Top](<## CONTENTS>)
+ [Back to Top](#table_of_contents)
+
 #### Code Used
 
 - [I think therefore i Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) - Introduction to Django walkthrough.
@@ -188,5 +199,6 @@ Please see [TESTING.md](TESTING.MD) for all testing performed
 - [Djangoproject](https://docs.djangoproject.com/en/4.2/topics/email/)- Sending email through Django.
 - [geeksforgeeks](https://www.geeksforgeeks.org/setup-sending-email-in-django-project/) - Tutorial for sending emails in a Django project.
 - [QuestionPro](https://www.questionpro.com/blog/health-survey/#:~:text=A%20health%20survey%20is%20a,a%20community%20acts%20towards%20health.)Sample information on a health survey.
+- [mdnweb docs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/) - Used for details on the Authorisation and Forms 
 
-[Back to Top](<## CONTENTS>)
+[Back to Top](#table_of_contents)
