@@ -58,14 +58,14 @@ class Appointment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
-    def __str__(self):
-        return f"{self.user.patient_ID} | day: {self.day} | time: {self.time}"
-
     class Meta:
         ordering = ['patient_ID']
 
     def __str__(self):
-        return self.patient_ID
+        return f"{self.patient_ID}, {self.full_name}"
+
+    def update_appointment(ModelAdmin, request, queryset):
+        queryset.update(status="p")
 
 
 class Comment(models.Model):
@@ -86,4 +86,7 @@ class Comment(models.Model):
         ordering = ['-appointment_number']
 
     def __str__(self):
-        return self.patient_ID
+        return f"{self.patient_ID}, {self.full_name}"
+
+    def update_comment(ModelAdmin, request, queryset):
+        queryset.update(status="p")
