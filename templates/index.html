@@ -8,8 +8,11 @@
 <div class="image-container">
     <img src="../static/images/stethoscope.png" class="img-fluid" alt="close-up-photo-of-a-stethoscope">
 </div>
-
-<!--Blurb on a health Survey accordion-->
+  <!--Overview of the Survey-->
+  <div class="container-fluid">
+    <h2 class = "indexblurb">Welcome to the <span class="brand">Patients Survey</span></h2>
+    <h3 class = "indexblurb">Details about the Survey</h3>
+    <!--Blurb on a health Survey accordion-->
   <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item about">
       <h2 class="accordion-header" id="flush-headingOne">
@@ -41,26 +44,18 @@
         <div class="accordion-body"><strong>To locate risk factors.</strong> This type of survey allows physicians to locate risk factors in the community around the hospital or health care centers, such as tobacco use, alcohol use, poor diet habits, and lack of physical exercise, which are common health behaviors.</div>
       </div>
     </div>
-  </div>
-  <!--Overview of the Survey-->
-  <div class="container-fluid">
-    <h2 class = "indexblurb">Welcome to the <span class="brand">Patients Survey</span></h2>
-        <p class = "indexblurb">The Survey has the following record counts:</p>
-        <!--Total number of patients recruited and comments-->
-            <ul>
-                <li><strong>Total number of Patients Recruited :</strong> {{ num_appointments }}</li>
-                <li><strong>Comments added to Patient Files:</strong> {{ num_comments }}</li>
-            </ul>
-  </div>
-  <div class="container-fluid">
-    <h2>Appointments Created</h2>
-    <ul>
-        {% for appoinment in object_list %}
-            <li>{{ appointment.name }}</li>
-        {% endfor %}
-    </ul>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Can I Sign Up
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body"><strong>Yes!</strong> Please click on the form to submit your details, you will be invited in have consultation to check whether you can be apart of the survey.</div>
+      </div>
+    </div>
   </div>
 
-</div>
+  </div>
   
 {% endblock %}

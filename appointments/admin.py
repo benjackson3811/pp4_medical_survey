@@ -12,7 +12,7 @@ class PostAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on', 'updated_on')
     summernote_fields = ('content',)
 
-    
+
 @admin.register(Comment)
 class PostAdmin(admin.ModelAdmin):
 
@@ -28,3 +28,4 @@ class PostAdmin(admin.ModelAdmin):
 
     class patient_IDInstanceAdmin(admin.ModelAdmin):
         list_filter = ('patient_ID', 'full_name', 'day', 'created_on')
+

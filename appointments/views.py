@@ -8,16 +8,14 @@ from .models import Appointment, Comment
 def index(request):
 
     num_appointments = Appointment.objects.all().count()
-    num_comments = Comment.objects.all().count()
 
-    context = {
+    appointment = {
         'num_appointments': num_appointments,
         'num_comments': num_comments,
     }
 
     # Render the HTML template index.html with the data in the context variable
-    return render(request, 'index.html', context=context)
-
+    return render(request, 'index.html', {'appointment': appointment})
 
 class AppointmentList(generic.ListView):
     model = Appointment
