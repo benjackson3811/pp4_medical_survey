@@ -25,3 +25,6 @@ class PostAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(status=True)
+
+    class patient_IDInstanceAdmin(admin.ModelAdmin):
+        list_filter = ('patient_ID', 'full_name', 'day', 'created_on')

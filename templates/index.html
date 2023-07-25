@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!---details from https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms--->
+
+<!-- https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html-->
+
+<p>Welcome to the <span class="brand">Patients Survey</span></p>
+<h2>Dynamic Content</h2>
+<p>The Survey has the following record counts:</p>
+<ul><li><strong>Patients Recruited :</strong> {{ num_appointments }}</li>
+    <li><strong>Comments added to Patient Files:</strong> {{ num_comments }}</li>
+</ul>
+
+{%endblock%}
