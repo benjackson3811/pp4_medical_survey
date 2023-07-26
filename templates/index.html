@@ -56,6 +56,20 @@
     </div>
   </div>
 
+  <div class="container-fluid">
+    {% if user.is_authenticated %}
+    <p> Details of Patient's Appointments </p>
+
+    <ul>
+      {% for appointment in appointment_list %}
+      <li>{{ appointment }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>Please sign in to see details of the Patient's Appointments</p>
+    {% endif %}
+  </div>
+
   </div>
   
 {% endblock %}
