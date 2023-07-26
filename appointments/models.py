@@ -52,7 +52,7 @@ class Appointment(models.Model):
         max_length=50, choices=APPOINTMENT_NUMBER, default="")
     appointment_notes = models.CharField(max_length=200, null=False, default="")
     updated_on = models.DateTimeField(auto_now=True)
-    date = models.DateField(default=datetime.now)
+    day = models.DateField(default=datetime.now)
     time = models.CharField(
         max_length=10, choices=TIME_CHOICES, default="9 AM")
     created_on = models.DateTimeField(auto_now_add=True)

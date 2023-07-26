@@ -6,7 +6,7 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Appointment)
 class PostAdmin(SummernoteModelAdmin):
 
-    list_display = ('patient_ID', 'slug', 'full_name', 'status', 'created_on', 'date', 'appointment_number')
+    list_display = ('patient_ID', 'slug', 'full_name', 'status', 'created_on', 'day', 'appointment_number')
     search_fields = ('patient_ID', 'full_name', 'appointment_number')
     prepopulated_fields = {'slug': ('patient_ID',)}
     list_filter = ('status', 'created_on', 'updated_on')
@@ -28,5 +28,3 @@ class PostAdmin(admin.ModelAdmin):
 
     class patient_IDInstanceAdmin(admin.ModelAdmin):
         list_filter = ('patient_ID', 'full_name', 'day', 'created_on')
-
-
