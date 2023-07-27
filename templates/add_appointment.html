@@ -1,12 +1,23 @@
-{% extends 'base.html' %} {% block content %}
+<title>Online Appointment Form</title>
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+
+{% if user.is_authenticated %}
 <div class="form-group">
     <h1>Add a new patient</h1>
         <br></br>
+        <div>
         <form method="POST">
             {% csrf_token %}
-            {( form.as_p )}
+            {{ form.as_p }}
             <button call="btn btn-secondary">Add</button>
             </form>
+        </div>
 </div>
+
+{% else %}
+            
+{% endif %}
 
 {% endblock content %}

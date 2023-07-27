@@ -3,6 +3,7 @@ from django.views import generic
 from .models import Appointment, Comment
 from .forms import AppointmentForm
 
+# form function taken from from https://www.csestack.org/create-html-form-insert-data-database-django/
 # index form styling from from https://www.youtube.com/watch?v=6-XXvUENY_8
 
 
@@ -13,9 +14,13 @@ class AppointmentList(generic.ListView):
     paginate_by = 6
 
 
-class AddAppointment(generic.CreateView):
-    model = Appointment
-    form_class = AppointmentForm
-    template_name = "add_appointment.html"
 
+def appointment_form(request):
+    if request.method == "POST":
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = AppointmentForm()
+    return render(request, 'add_appointment.html', {'form': form})
 

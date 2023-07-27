@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'appointments',
 ]
 
@@ -56,6 +57,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUTC_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstap4'
 
 
 MIDDLEWARE = [

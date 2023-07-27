@@ -126,6 +126,8 @@ Open Sans: chosen as primary font because its is clear and elegant. The typed le
 Raleway: chosen for headings because it pairs well with the Caveat font.
 
 ### Imagery
+
+
 [Back to Top](#table_of_contents)
 
 ### Wireframes
@@ -163,7 +165,7 @@ The languages used in this project are:
 - [Elephant SQL](https://www.elephantsql.com/) Postgres SQL as a Service.
 - [Cloudinary](https://cloudinary.com/) Free Media Management System.
 - [Coolors](https://coolors.co/) Online Colour Palette generator
-- [Pexels](https://www.pexels.com/)Free stock photos.
+- [Pexels](https://www.pexels.com/) Free stock photos.
 
 [Back to Top](#table_of_contents)
 
