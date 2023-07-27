@@ -44,24 +44,23 @@
 
 ---
 
-Patients Survey is a responsive website for a fictional medical survey. It allows the user to view inputted patient details, view the calendar of appointments and make appointments for a patient’s repeat visit.
-
 ## Object of the Website
 
-Patient Survey Storage is a responsive website for a medical survey. It allows the user to view inputted patient details, view the calendar of appointments and make appointments for a patient’s repeat visit.
+Patients Survey is a responsive website for a fictional medical survey. It allows the user to view inputted patient details, view a list of appointments and make appointments for a patient’s repeat visit.
 
 The app has two purposes 
 An online repository for storing patient details who have signed up for a survey. 
 A booking tool for follow up appointments for the survey.
 
 The users will be able to;
-- View, make/ edit/ delete for an account.
-- View, make/ edit the patient details who have been recruited,
-- View, make/ edit/ delete their follow up appointment scheduled for them to return 3 months later. 
+- View, make/ edit/ delete an account.
+- View, input / edit the patient details who have been recruited,
+- View, input / edit/ delete their follow up appointment scheduled for them to return 3 months later. 
 
+[Back to Top](#table_of_contents)
 
 ## UX
-[Back to Top](#table_of_contents)
+
 ### Target audience
 
 The primary users of the survey of the planner will be;
@@ -127,6 +126,11 @@ Raleway: chosen for headings because it pairs well with the Caveat font.
 
 ### Imagery
 
+Imagery of the site is from [Pexels](https://www.pexels.com/). 
+
+![stethoscope](/static/images/stethoscope.png)
+
+The Stethoscope picture was taken because it is a common image of going to the doctors. With the forms beneath the image this allows the reader a visual queue of them going to dcotors and getting their details collected.
 
 [Back to Top](#table_of_contents)
 
@@ -135,6 +139,7 @@ Raleway: chosen for headings because it pairs well with the Caveat font.
 [Back to Top](#table_of_contents)
 
 ### ERP Database model
+
 [Back to Top](#table_of_contents)
 
 ## Languages and libraries used
@@ -171,7 +176,62 @@ The languages used in this project are:
 
 ### Deployment
 
-The development environment used for this project was Gitpod. Regular commits and pushes to Github have been employed to be able to track and trace the development process of the website, as well as the creation of a separate branches to be able control the development process of the project using pull requests.
+---
+- Development Environment - Github
+    -  Regular commits and pushes to Github have been employed to be able to track and trace the development process of the website.
+
+---
+- Create app on heroku
+    - Create heroku account or sign in
+    - Click create new app in the top right corner
+    - Give app a name and choose location nearest to you
+    
+- Attach the database
+    - Click resources tab
+    - Search for postgres and add heroku postgres
+
+- Prepare your enviroment and settings.py
+    - Click settings tab
+    - Click reveal config vars
+    - Copy adress to database
+    - Add secret key variable from project
+    - Create an env.py file
+    - Add env.py file to gitignore
+    - Create enviroment variables for database and secret key 
+    - Attache heroku database as default in settings.py 
+    - Add heroku app name in Allowed hosts ['bookings2022ci.herokuapp.com', 'localhost']
+    - Create a procfile with content: web: gunicorn django_bookings.wsgi
+
+- Get static and media files stored on cloudinary
+    - Login/Register a Cloudinary account
+    - Go to dashboard and copy API Enviroment variable
+    - Add Cloudinary url to env.py (Delete prefix Cloudinary_url=)
+    - Copy Cloudinary url in config vars in heroku settings
+    - Add Config vars DISABLE_COLLECTSTATIC 1
+    - Add Cloudinary_storage and Cloudinary to Installed apps in settings.py
+    - Add these lines of code to settings.py
+        - STATIC_URL = '/bookings/static/'
+
+        - STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+        - STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+        - STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+        - MEDIA_URL = '/media/'
+        - DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    - Add TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates') to settings.py
+    - In TEMPLATTES  in settinggs.py add [TEMPLATES_DIR] to Dirs: field
+
+- Deployment on Heroku
+    - Click deployment tab
+    - Connect github account
+    - Search for repository
+    - Click deploy branch
+
+- Final deployment
+    - DEBUG flag must be set to false in settings.py
+    - Add X_FRAME_OPTIONS = 'SAMEORIGIN' to settings.py
+    - Remove Disablestatic config var
+    - Click deploy branch in deploy menu.
 
 [Back to Top](#table_of_contents)
 

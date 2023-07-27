@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 
 <!--Hero Image-->
 
 <div class="image-container">
-    <img src="../static/images/stethoscope.png" class="img-fluid" alt="close-up-photo-of-a-stethoscope">
+    <img src="{% static 'images/stethoscope.png' %}" class="img-fluid" alt="close-up-photo-of-a-stethoscope">
 </div>
   <!--Overview of the Survey-->
   <div class="container-fluid">
