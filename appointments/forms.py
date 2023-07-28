@@ -9,7 +9,7 @@ class AppointmentForm(forms.ModelForm):
     class Meta:
         """ Class to add the form body to the form based on the appointment"""
         """ model"""
-            
+
         model = Appointment
         fields = ('patient_ID', 'author', 'full_name', 'gender', 'address', 'appointment_number', 'appointment_notes', 'day', 'status',)
 

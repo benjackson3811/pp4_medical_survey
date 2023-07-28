@@ -138,6 +138,7 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
  ## Fixed Bugs
 1. IntegrityError at /add_appointment duplicate key value violates unique constraint "appointments_appointment_slug_key"
 DETAIL:  Key (slug)=() already exists.
+https://stackoverflow.com/questions/46498168/duplicate-key-value-violates-unique-constraint-auth-user-username-keydetail-k
 
  [Back to Top](#page_contents)
 
