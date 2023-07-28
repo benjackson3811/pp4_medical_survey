@@ -7,15 +7,12 @@ from .forms import AppointmentForm
 # index form styling from from https://www.youtube.com/watch?v=6-XXvUENY_8
 
 
-class AppointmentList(generic.ListView):
-    model = Appointment
-    queryset = Appointment.objects.filter(status=1).order_by('-created_on')
-    template_name = 'index.html'
-    paginate_by = 6
+def index(request):
+    return render(request, "index.html",{})
 
 
 
-def booking(request):
+def appointment(request):
     #Calling 'validWeekday' Function to Loop days you want in the next 21 days:
     weekdays = validWeekday(22)
 
@@ -34,10 +31,10 @@ def booking(request):
         request.session['day'] = day
         request.session['service'] = service
 
-        return redirect('bookingSubmit')
+        return redirect('appointmentSubmit')
 
 
-    return render(request, 'booking.html', {
+    return render(request, 'appointment.html', {
             'weekdays':weekdays,
             'validateWeekdays':validateWeekdays,
         })
@@ -88,7 +85,7 @@ def bookingSubmit(request):
             messages.success(request, "Please Select A Service!")
 
 
-    return render(request, 'bookingSubmit.html', {
+    return render(request, 'appointmentSubmit.html', {
         'times':hour,
     })
 

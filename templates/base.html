@@ -33,7 +33,7 @@
                             <a class="nav-link active cHover" href="#contact">Contact Us</a>
                         </li>     
                         <li class="nav-item">
-                            <a class="nav-link active cHover" href="{% url 'booking' %}">Online Booking</a>
+                            <a class="nav-link active cHover" href="{% url 'appointment' %}">Online Booking</a>
                         </li>                   
                         {% if user.is_authenticated %}
                         <!--Clinic Staff Link-->
@@ -47,7 +47,7 @@
                             <ul class="dropdown-menu  border zNav">
                               <li><a class="dropdown-item" href="{% url 'userPanel' %}">User Panel</a></li>
                               <li><hr class=""></li>
-                              <li><a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a></li>
+                              <li><a class="dropdown-item" href="#">Sign Out</a></li>
                             </ul>
                         </li>
                         {% else %}
@@ -94,7 +94,7 @@
                             <a href="tel: 12345678" class=""><span class="cBlue">Tel: 12345678</span></a>
                         </p>
                         <p>
-                            <a class="uLine cHover" href="{% url 'booking' %}" >Online Booking</a>
+                            <a class="uLine cHover" href="{% url 'appointment' %}" >Online Booking</a>
                         </p>
                     </div>
                     <!-- Grid column -->
