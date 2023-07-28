@@ -36,4 +36,3 @@ class AppointmentForm(forms.ModelForm):
             'day': 'Date of Appointment',
             'status': 'Patient Status ',
             }
-
