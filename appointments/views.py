@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
 from .models import Appointment, Comment
 from django.contrib import messages
+from django.http import HttpResponse
 
 # view basic structure taken from https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78 and amended
 
@@ -10,7 +11,7 @@ def index(request):
     return render(request, "index.html", {})
 
 
-def appointment(request):
+def appointment(request, slug, *args, **kwargs):
     # Calling 'validWeekday' Function to Loop days you want in the next 21 days:
     weekdays = validWeekday(22)
 
@@ -22,7 +23,7 @@ def appointment(request):
         day = request.POST.get('day')
         if status == None:
             messages.success(request, "Please define the appointment status!")
-            return redirect('add_appointment')
+            return redirect('appointment')
 
         # Store day and status in django session:
         request.session['day'] = day
@@ -37,7 +38,7 @@ def appointment(request):
 
 
 def appointmentSubmit(request):
-    user = request.user
+    full_name = request.user
     times = [
         "9 AM", "9:30 PM", "10 PM", "10:30 PM", "11 PM", "11:30 PM", "12 PM", "12:30 PM", "1 PM", "1:30 PM"
     ]
@@ -46,6 +47,7 @@ def appointmentSubmit(request):
     deltatime = today + timedelta(days=21)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
+        
 
     # Get stored data from django session:
     day = request.session.get('day')
@@ -63,7 +65,8 @@ def appointmentSubmit(request):
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1:
                             AppointmentForm = Appointment.objects.get_or_create(
-                                user=user,
+                                full_name=full_name,
+                                slug=slug,
                                 status=status,
                                 day=day,
                                 time=time,
@@ -84,7 +87,7 @@ def appointmentSubmit(request):
     return render(request, 'appointmentSubmit.html', {
         'times': hour,
     })
-
+    
 
 def userPanel(request):
     user = request.user
@@ -129,7 +132,7 @@ def userUpdate(request, id):
 
 
 def userUpdateSubmit(request, id):
-    user = request.user
+    full_name = request.user
     times = [
         "9 AM", "9:30 PM", "10 PM", "10:30 PM", "11 PM", "11:30 PM", "12 PM", "12:30 PM", "1 PM", "1:30 PM"
     ]
@@ -156,7 +159,7 @@ def userUpdateSubmit(request, id):
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1 or userSelectedTime == time:
                             AppointmentForm = Appointment.objects.filter(pk=id).update(
-                                user=user,
+                                full_name=full_name,
                                 status=status,
                                 day=day,
                                 time=time,

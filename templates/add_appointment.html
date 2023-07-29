@@ -12,21 +12,37 @@
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
     <form method="post" action="{% url 'appointment' %}" class="me-2 ms-2" required>
         {% csrf_token %}
-
         <!--input service-->
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Patient ID</span>
+            <input type="text" class="form-control" placeholder="Patient ID" aria-label="Patient ID" aria-describedby="Patient ID field">
+          </div>
         <div>
-            <h3 class="">Select Service:</h3>
-            <select class="form-select fs-3" name="service">
-                <option value="Doctor care">Doctor care</option>
-                <option value="Nursing care">Nursing care</option>
-                <option value="Medical social services">Medical social services</option>
-                <option value="Homemaker or basic assistance care">Homemaker or basic assistance care</option>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Full Name</span>
+            <input type="text" class="form-control" placeholder="Patient's Full Name" aria-label="Full Name" aria-describedby="Full Name field">
+          </div>
+        <div>
+        <div>
+            <h3 class="">Select Gender:</h3>
+            <select class="form-select fs-3" name="status" multiple aria-label="multiple status select option">
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+                <option value="3">Other</option>
+            </select>
+        </div>
+        <div>
+            <h3 class="">Select Status:</h3>
+            <select class="form-select fs-3" name="status" multiple aria-label="multiple status select option">
+                <option value="1">Just Recruited</option>
+                <option value="2">Completed First Appointment</option>
+                <option value="3">Completed Second Appointment</option>
             </select>
         </div>
             <!--input day-->
             <div class="mt-3">
                 <h3 class="">Select Day:</h3>
-                <select class="form-select fs-3" name="day">
+                <select class="form-select fs-3" name="day" multiple aria-label="multiple select example">
                     {% for validateWeekday in validateWeekdays %}
                     <option value="{{validateWeekday}}">{{validateWeekday}}</option>
                     {% endfor %}
@@ -47,6 +63,5 @@
 </div>
 
 {% endif %}
-
 
 {% endblock %}

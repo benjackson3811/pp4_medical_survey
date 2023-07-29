@@ -42,15 +42,13 @@ APPOINTMENT_NUMBER = (
 
 class Appointment(models.Model):
     patient_ID = models.CharField(max_length=80, null=False, blank=False)
-    slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="appointment_number", default="")
+        User, on_delete=models.CASCADE, related_name="appointment_number", null=True, blank=True)
     full_name = models.CharField(max_length=80, null=False, blank=False)
     gender = models.CharField(max_length=10, choices=GENDER, default="")
     address = models.CharField(max_length=200, null=False, default="")
     appointment_number = models.CharField(
         max_length=50, choices=APPOINTMENT_NUMBER, default="")
-    appointment_notes = models.CharField(max_length=200, null=False, default="")
     updated_on = models.DateTimeField(auto_now=True)
     day = models.DateField(default=datetime.now)
     time = models.CharField(

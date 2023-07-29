@@ -11,7 +11,7 @@ class AppointmentForm(forms.ModelForm):
         """ model"""
 
         model = Appointment
-        fields = ('patient_ID', 'author', 'full_name', 'gender', 'address', 'appointment_number', 'appointment_notes', 'day', 'status',)
+        fields = ('patient_ID', 'author', 'full_name', 'gender', 'address', 'appointment_number', 'appointment_notes',)
 
         widgets = {
             'patient_ID': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter a 10 digit patient ID'}),
