@@ -164,10 +164,10 @@ def userUpdateSubmit(request, id):
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1 or userSelectedTime == time:
                             AppointmentForm = Appointment.objects.filter(pk=id).update(
-                                full_name=full_name,
-                                status=status,
-                                day=day,
-                                time=time,
+                                full_name=str(full_name),
+                                status=str(status),
+                                day=str(day),
+                                time=str(time),
                             )
                             messages.success(request, "Appointment Edited!")
                             return redirect('index')
