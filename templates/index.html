@@ -11,8 +11,39 @@
 
     <div class="bg bg-secondary text-dark pt-5 pb-5">
         <div class="text-center  pt-5 pb-5">
-            <h1 class="display-1 cGreen me-2 ms-2">Dr.John Smith</h1>
-            <p class="fs-4 mt-3">Example Text</p>
+            <h1 class="display-1 cGreen me-2 ms-2">Patients Survey</h1>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item about">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      What is a Health Survey?
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body"><strong>Health surveys are :</strong> a tool used to gather information on the behavior of a specific group of people from a determined area. This kind of survey allows health care experts to understand better how a community acts towards health.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Why are Health Surveys neccessary?
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body"><strong>Health surveys are :</strong> a necessary and helpful instrument for decision-making when crafting a health plan. Health surveys provide specific information about the epidemiological situation, health trends, life habits, and the use of health services from the patients’ point of view.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Why are we collecting this information?
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body"><strong>To locate risk factors.</strong> This type of survey allows physicians to locate risk factors in the community around the hospital or health care centers, such as tobacco use, alcohol use, poor diet habits, and lack of physical exercise, which are common health behaviors.</div>
+                </div>
+              </div>
+            </div>
             <a type="button" class="btn btn-primary shadow  mt-5" href="{% url 'appointment' %}">Online Booking</a>
         </div>
     </div>

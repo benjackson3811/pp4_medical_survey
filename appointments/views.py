@@ -20,7 +20,6 @@ def appointment(request):
     validateWeekdays = isWeekdayValid(weekdays)
 
     if request.method == 'POST':
-        gender = request.POST.get('gender')
         status = request.POST.get('status')
         day = request.POST.get('day')
         if status == None:
@@ -28,7 +27,6 @@ def appointment(request):
             return redirect('appointment')
 
         # Store day and status in django session:
-        request.POST.get['gender'] = gender
         request.session['day'] = day
         request.session['status'] = status
 
