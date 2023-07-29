@@ -5,9 +5,6 @@ from datetime import datetime
 
 # Create your models here.
 
-REFERRED = (
-    (0, ""), (1, "NO"), (2, "YES")
-)
 
 GENDER = (
     ("", ""), ("FEMALE", "FEMALE"), ("MALE", "MALE"), ("OTHER", "OTHER")
@@ -66,25 +63,3 @@ class Appointment(models.Model):
         queryset.update(status="p")
 
 
-class Comment(models.Model):
-    patient_ID = models.CharField(max_length=80, null=False, blank=False)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='appointment_notes', default="")
-    full_name = models.CharField(max_length=80, null=False, blank=False)
-    gender = models.CharField(max_length=50, choices=GENDER, default="")
-    appointment_number = models.CharField(
-        max_length=50, choices=APPOINTMENT_NUMBER, default="")
-    appointment_notes = models.CharField(max_length=200, null=False, default="")
-    created_on = models.DateTimeField(auto_now_add=True)
-    image = CloudinaryField('image', default='placeholder')
-    status = models.IntegerField(choices=STATUS, default=0)
-
-    class Meta:
-        ordering = ['-appointment_number']
-
-    def __str__(self):
-        return f"{self.patient_ID}, {self.full_name}"
-
-    def update_comment(ModelAdmin, request, queryset):
-        queryset.update(status="p")

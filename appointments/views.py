@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
-from .models import Appointment, Comment
+from .models import Appointment
 from django.contrib import messages
 from django.http import HttpResponse
 
@@ -20,8 +20,6 @@ def appointment(request):
     validateWeekdays = isWeekdayValid(weekdays)
 
     if request.method == 'POST':
-        patient_ID = request.POST.get('patient_ID')
-        full_name = request.POST.get('full_name')
         gender = request.POST.get('gender')
         status = request.POST.get('status')
         day = request.POST.get('day')
@@ -30,9 +28,7 @@ def appointment(request):
             return redirect('appointment')
 
         # Store day and status in django session:
-        request.session['patient_ID'] = patient_ID
-        request.session['full_name'] = full_name
-        request.session['gender'] = gender
+        request.POST.get['gender'] = gender
         request.session['day'] = day
         request.session['status'] = status
 

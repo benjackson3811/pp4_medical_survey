@@ -139,6 +139,8 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 1. IntegrityError at /add_appointment duplicate key value violates unique constraint "appointments_appointment_slug_key"
 DETAIL:  Key (slug)=() already exists.
 https://stackoverflow.com/questions/46498168/duplicate-key-value-violates-unique-constraint-auth-user-username-keydetail-k
+2. Django/Python: Tried to update field with a model instance. Use a value compatible with CharField
+https://stackoverflow.com/questions/38936573/django-python-tried-to-update-field-with-a-model-instance-use-a-value-compatib
 
  [Back to Top](#page_contents)
 
