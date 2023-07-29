@@ -4,6 +4,7 @@ from .models import Appointment, Comment
 from django.contrib import messages
 from django.http import HttpResponse
 
+
 # view basic structure taken from https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78 and amended
 
 
@@ -11,9 +12,9 @@ def index(request):
     return render(request, "index.html", {})
 
 
-def appointment(request, slug, *args, **kwargs):
+def appointment(request):
     # Calling 'validWeekday' Function to Loop days you want in the next 21 days:
-    weekdays = validWeekday(22)
+    weekdays = validWeekday(33)
 
     # Only show the days that are not full:
     validateWeekdays = isWeekdayValid(weekdays)
@@ -44,10 +45,9 @@ def appointmentSubmit(request):
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
+    deltatime = today + timedelta(days=32)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
-        
 
     # Get stored data from django session:
     day = request.session.get('day')
@@ -61,12 +61,11 @@ def appointmentSubmit(request):
 
         if status != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Saturday' or date == 'Wednesday':
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday':
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1:
                             AppointmentForm = Appointment.objects.get_or_create(
                                 full_name=full_name,
-                                slug=slug,
                                 status=status,
                                 day=day,
                                 time=time,
@@ -87,7 +86,7 @@ def appointmentSubmit(request):
     return render(request, 'appointmentSubmit.html', {
         'times': hour,
     })
-    
+
 
 def userPanel(request):
     user = request.user
@@ -107,8 +106,8 @@ def userUpdate(request, id):
 
     # 24h if statement in template:
     delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=1)).strftime('%Y-%m-%d')
-    # Calling 'validWeekday' Function to Loop days you want in the next 21 days:
-    weekdays = validWeekday(22)
+    # Calling 'validWeekday' Function to Loop days you want in the next 32 days:
+    weekdays = validWeekday(33)
 
     # Only show the days that are not full:
     validateWeekdays = isWeekdayValid(weekdays)
@@ -155,7 +154,7 @@ def userUpdateSubmit(request, id):
 
         if status != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Saturday' or date == 'Wednesday':
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday':
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1 or userSelectedTime == time:
                             AppointmentForm = Appointment.objects.filter(pk=id).update(
@@ -187,10 +186,10 @@ def userUpdateSubmit(request, id):
 def staffPanel(request):
     today = datetime.today()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
+    deltatime = today + timedelta(days=33)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
-    # Only show the Appointments 21 days from today
+    # Only show the Appointments 32 days from today
     items = Appointment.objects.filter(day__range=[minDate, maxDate]).order_by('day', 'time')
 
     return render(request, 'staffPanel.html', {
@@ -205,13 +204,13 @@ def dayToWeekday(x):
 
 
 def validWeekday(days):
-    # Loop days you want in the next 21 days:
+    # Loop days you want in the next 32 days:
     today = datetime.now()
     weekdays = []
     for i in range(0, days):
         x = today + timedelta(days=i)
         y = x.strftime('%A')
-        if y == 'Monday' or y == 'Saturday' or y == 'Wednesday':
+        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday':
             weekdays.append(x.strftime('%Y-%m-%d'))
     return weekdays
 
