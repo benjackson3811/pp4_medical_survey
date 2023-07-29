@@ -20,6 +20,9 @@ def appointment(request):
     validateWeekdays = isWeekdayValid(weekdays)
 
     if request.method == 'POST':
+        patient_ID = request.POST.get('patient_ID')
+        full_name = request.POST.get('full_name')
+        gender = request.POST.get('gender')
         status = request.POST.get('status')
         day = request.POST.get('day')
         if status == None:
@@ -27,6 +30,9 @@ def appointment(request):
             return redirect('appointment')
 
         # Store day and status in django session:
+        request.session['patient_ID'] = patient_ID
+        request.session['full_name'] = full_name
+        request.session['gender'] = gender
         request.session['day'] = day
         request.session['status'] = status
 
@@ -89,10 +95,10 @@ def appointmentSubmit(request):
 
 
 def userPanel(request):
-    user = request.user
-    appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
+    full_name = request.user
+    appointments = Appointment.objects.filter(full_name=full_name).order_by('day', 'time')
     return render(request, 'userPanel.html', {
-        'user': user,
+        'full_name': full_name,
         'appointments': appointments,
     })
 
