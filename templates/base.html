@@ -41,6 +41,9 @@
                         </li>     
                         <li class="nav-item">
                             <a class="nav-link active cHover" href="{% url 'appointment' %}">Online Booking</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link active cHover" href="{% url 'account_login' %}">Sign in/Sign Up</a>
                         </li>                   
                         {% if user.is_authenticated %}
                         <!--Clinic Staff Link-->
@@ -56,10 +59,6 @@
                               <li><hr class=""></li>
                               <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
                             </ul>
-                        </li>
-                        {% else %}
-                        <li class="nav-item me-3">
-                            <a class="nav-link active cHover" href="{% url 'account_login' %}">Sign in/Sign Up</a>
                         </li>
                         {% endif %}
                     </ul>
