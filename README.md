@@ -135,13 +135,22 @@ The data is a very simple two table model.
 
 ## Site Features
 
-The front page that user sees on first visiting the site
+### Home Page
+The home page that user sees on first visiting the site. Designed to be
 
 ![Home Page](/static/images/readme_images/homepage.png)
 
+### Nav Bar
+ Navigation Bar for the movement around the site.
+
 ![Nav Bar](/static/images/readme_images/navbar.png)
 
+### Online Booking
+
+Section where the user goes to create an appointment. As this is an MVP there is limited sections of data to be added
 ![Add-Appointment](/static/images/readme_images/Add_appointment.png)
+
+### Secondary Online Submit 
 
 ![Appointment Submit](/static/images/readme_images/Add_appointment.png)
 
@@ -156,6 +165,12 @@ The front page that user sees on first visiting the site
 ![user update submit notification](/static/images/readme_images/edit%20appointment%20notification.png)
 
 ![user appointment update confirmation](/static/images/readme_images/appointment%20edit%20confirmation.png)
+
+![sign in](/static/images/readme_images/sign%20in.png)
+
+![SIgn in Successfullu](/static/images/readme_images/sign%20in%20success.png)
+
+![login](/static/images/readme_images/login.png)
 
 ## Future Features
 
