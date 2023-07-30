@@ -9,9 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
-from pathlib import Path
 import os
+from pathlib import Path
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -28,11 +27,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS ='SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-benjackson3-pp4medicals-e1muaeu36sa.ws-eu102.gitpod.io','patients-survey-b68b4f88cb18.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['patients-survey-b68b4f88cb18.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -58,7 +57,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
-LOGOUTC_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 CRISPY_TEMPLATE_PACK = 'bootstap4'
 

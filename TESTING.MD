@@ -16,29 +16,37 @@
 
  ### ACCEPTANCE CRITERIA
  [&check;] Home Page visible on opening
+
  [&check;] Site's key information, call to arms, navigation, log on and sign up clearly visible.
- [&check;] No error message stopping access
+
+ [&check;] No error message stopping access.
 
 
  2. As a Site User, I want to be able to navigate the website, so that I can view information on different parts of the website [#3](https://github.com/benjackson3811/pp4_medical_survey/issues/3)
 
  ### ACCEPTANCE CRITERIA
  [&check;] Fixed Navbar on top of the webpage
+
  [&check;] Working links
+
  [&check;] Clear Descriptions
 
  3. As a Site User, I want to be able to create a user account, so that I can sign up for the medical survey  [#4](https://github.com/benjackson3811/pp4_medical_survey/issues/4)
 
  ### ACCEPTANCE CRITERIA
  [&check;] Able to create a user account.
+
  [&check;] Add User details (Name, mobile number email address).
+
  [&check;] Can not sign in without valid username and/ or password.
 
  4. As a Site User, I want to be able to Log in to my account, so that I can View, edit or delete information on my account.  [#5](https://github.com/benjackson3811/pp4_medical_survey/issues/5)
 
  ### ACCEPTANCE CRITERIA
  [&check;] Able to log in with Username and password
+
  [&check;] Able to access account.
+
  [&check;] Can not sign in without valid username and/ or password.
 
  5. As a Site User, I want to be able to log out of my account, so that I can leave my account safely.  [#6](https://github.com/benjackson3811/pp4_medical_survey/issues/6)
@@ -50,49 +58,64 @@
 
  ### ACCEPTANCE CRITERIA
  [&check;] Complete form with personal data (first name, last name, DOB etc).
+
  [&check;] Be able to schedule an appointment for a further appointment. ( on a valid time and day, when there isn't another appointment).
+
  [&check;] Be alerted if any of the data added is incorrect (ie email address with a @)
 
  7. As a Site User, I want to get a view screen before confirmation , so that I can confirm the accuracy of my data inputted into the form.  [#8](https://github.com/benjackson3811/pp4_medical_survey/issues/8)
 
 ### ACCEPTANCE CRITERIA
- [] Before confirmation. Get a notification screen asking if the data inputted into the form is correct.
+ [&check;] Before confirmation. Get a notification screen asking if the data inputted into the form is correct.
 
 8. As a Site User, I want to have the ability to make changes/ update patient data, so that I can ensure it is correctly added and updated.  [#9](https://github.com/benjackson3811/pp4_medical_survey/issues/9)
 
 ### ACCEPTANCE CRITERIA
- [] Ability to edit typed input data.
- [] Ability to edit Appointment date and time
- [] Clearly marked edit buttons on key details form.
+ [&check;] Ability to edit typed input data.
+
+ [&check;] Ability to edit Appointment date and time.
+ 
+ [&check;] Clearly marked edit buttons on key details form.
 
  9. As a Site User, I want to get an email confirmation confirming data has been added/ edited/ deleted, so that I can have awareness of the change  [#10](https://github.com/benjackson3811/pp4_medical_survey/issues/10)
 
  ### ACCEPTANCE CRITERIA
  [] Receiving a change email notification.
 
+ User Story not completed.
+
 10. As a Site admin, I want to be able to view a list of patients, so that I can have awareness of the size of the survey [#11](https://github.com/benjackson3811/pp4_medical_survey/issues/11)
 
 ### ACCEPTANCE CRITERIA
- [&check;] Being able to see and search for the patients recruited.
+ [] Being able to see and search for the patients recruited.
 
 11. As a Site User, I want to *be able to search for inputted patients, so that I can access their details. [#12](https://github.com/benjackson3811/pp4_medical_survey/issues/12)
 
+
 ### ACCEPTANCE CRITERIA
- [] Have Search functionality.
- [] No errors stopping data from getting the details/
+ [&check;] Have Search functionality.
+
+ [] No errors stopping data from getting the details.
+
  [] Getting correct data back in the search.
+
+ User Story not completed due to a bug in the search functionality. The functionaltiy has been built onto the page - however at the minute. It doesnt work.
 
  12. As a Site User, I want to be able to delete incorrectly added data, so that I can ensure correct data is added to survey  [#13](https://github.com/benjackson3811/pp4_medical_survey/issues/13)
 
  ### ACCEPTANCE CRITERIA
  [] A delete button.
+
  [] Notification to user to confirm they want this action to be completed.
+
+ User Story not completed.
 
  13. As a Site Admin, I want to be able to approve which patient data is deleted, so that I can ensure there is an audit trail. [#14](https://github.com/benjackson3811/pp4_medical_survey/issues/14)
 
  ### ACCEPTANCE CRITERIA
- [] Patient Details arent automatically deleted.
- [] Site Admin has finally approval
+ [&check;] Patient Details arent automatically deleted.
+
+ [&check;] Site Admin has finally approval
 
 
 [Back to Top](#page_contents)
@@ -145,6 +168,8 @@ https://stackoverflow.com/questions/38936573/django-python-tried-to-update-field
  [Back to Top](#page_contents)
 
  ## Unfixed Bugs
+
+
  [Back to Top](#page_contents)
 
   ## Code Validation

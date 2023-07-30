@@ -43,8 +43,11 @@
                             <a class="nav-link active cHover" href="{% url 'appointment' %}">Online Booking</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link active cHover" href="{% url 'account_login' %}">Sign in/Sign Up</a>
-                        </li>                   
+                            <a class="nav-link active cHover" href="{% url 'account_signup' %}">Register</a>
+                        </li>  
+                        <li class="nav-item me-3">
+                            <a class="nav-link active cHover" href="{% url 'account_login' %}">Login</a>
+                        </li>                    
                         {% if user.is_authenticated %}
                         <!--Clinic Staff Link-->
                         <li class="nav-item">
@@ -105,12 +108,8 @@
                     </div>
                     
                     <!-- Footer -->
-                    <footer class="footer mt-auto py-3 dark-bg">
-                        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-                        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-                            <i class="fab fa-twitter-square ms-3"></i>
-                            <i class="fab fa-instagram-square ms-3"></i>
-                            <i class="fab fa-youtube-square ms-3"></i></p>
+                    <footer class= "footer footer mt-auto py-3 dark-bg">
+                        <p class="m-0 text-center text-white">Made for Patients Survey</p>
                     </footer>
                     <!-- Service links Regular -->
                   </div>

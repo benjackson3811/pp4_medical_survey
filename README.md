@@ -1,6 +1,6 @@
 #  Patients Survey
 
-[Website image]()
+![AM i Responsive](/static/images/readme_images/am%20i%20responsive.png)
 ---
 
 ## [CONTENTS](#table_of_contents)
@@ -23,14 +23,12 @@
   * [Logout](#logout)
   * [Future Implementations](#future-implementations)
   
-
 * [Technologies Used](#technologies-used)
   * [Languages Used](#languages-used)
   * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 
-* [Deployment & Local Development](#deployment--local-development)
+* [Deployment](#deployment)
   * [Deployment](#deployment)
-  * [Local Development](#local-development)
     * [How to Fork](#how-to-fork)
     * [How to Clone](#how-to-clone)
 
@@ -39,7 +37,6 @@
 * [Credits](#credits)
   * [Code Used](#code-used)
   * [Content](#content)
-  * [Media](#media)
   * [Acknowledgments](#acknowledgments)
 
 ---
@@ -68,25 +65,10 @@ The primary users of the survey of the planner will be;
 Medical Professionals.
 - Will need an account .
 - To input/ edit/ update the participant data if they are on the survey.
-- To contact the participant.
 - Check daily appointments.
 - Schedule appointments for their visits.
 - Validate the data.
 - Receive notification of change.
-
-Secondart Users
-
-Participant, 
-- Will need a notification of their data if they are on the survey.
-- They will;
-  - Receive notification of change.
-  - Validate the data.
-
-Data Scientist/ Researcher.
-- Will need an output to;
--View the participant data if they are on the survey.
-- Export the data.
--To analysis/ view trends
 
 [Back to Top](#table_of_contents)
 
@@ -116,6 +98,8 @@ Please note the numbering of the user stories does not match the user story in G
 
 Generated through [Coolors](https://coolors.co/) the colour picked in the palette are accessible, bold and work well together. They allow the website user to easily read and understand the writen information. 
 
+These colors have been added to the offical blacks and grey to provide the offical nature of a survey with the color providing the reassurance to the user.
+
 [Back to Top](#table_of_contents)
 
 ### Typography
@@ -126,21 +110,55 @@ Raleway: chosen for headings because it pairs well with the Caveat font.
 
 ### Imagery
 
-Imagery of the site is from [Pexels](https://www.pexels.com/). 
-
-![stethoscope](/static/images/stethoscope.png)
-
-The Stethoscope picture was taken because it is a common image of going to the doctors. With the forms beneath the image this allows the reader a visual queue of them going to dcotors and getting their details collected.
+No Imagery was added to the website.
 
 [Back to Top](#table_of_contents)
 
 ### Wireframes
 
+![Laptop Wireframes](/static/images/readme_images/Laptop%20wireframes.png)
+
+![Mobile Wireframes](/static/images/readme_images/Mobile%20Wireframes.png)
+
+![Tablet Wireframes](/static/images/readme_images/Tablet%20wireframes.png)
+
+Data
 [Back to Top](#table_of_contents)
 
 ### ERP Database model
 
+The data is a very simple two table model.
+
+[Database Model](/static/images/readme_images/Database%20Model.png)
+
 [Back to Top](#table_of_contents)
+
+## Site Features
+
+The front page that user sees on first visiting the site
+
+![Home Page](/static/images/readme_images/homepage.png)
+
+![Nav Bar](/static/images/readme_images/navbar.png)
+
+![Add-Appointment](/static/images/readme_images/Add_appointment.png)
+
+![Appointment Submit](/static/images/readme_images/Add_appointment.png)
+
+![Staff Panel](/static/images/readme_images/staff%20panel.png)
+
+![user Panel](/static/images/readme_images/user%20panel.png)
+
+![user Update](/static/images/readme_images/edit%20appointment%201.png)
+
+![user update submit](/static/images/readme_images/appointment%20edit%20confirmation.png)
+
+![user update submit notification](/static/images/readme_images/edit%20appointment%20notification.png)
+
+![user appointment update confirmation](/static/images/readme_images/appointment%20edit%20confirmation.png)
+
+## Future Features
+
 
 ## Languages and libraries used
 
@@ -170,7 +188,6 @@ The languages used in this project are:
 - [Elephant SQL](https://www.elephantsql.com/) Postgres SQL as a Service.
 - [Cloudinary](https://cloudinary.com/) Free Media Management System.
 - [Coolors](https://coolors.co/) Online Colour Palette generator
-- [Pexels](https://www.pexels.com/) Free stock photos.
 
 [Back to Top](#table_of_contents)
 
@@ -235,9 +252,6 @@ The languages used in this project are:
 
 [Back to Top](#table_of_contents)
 
- ### Local Development
-[Back to Top](#table_of_contents)
-
 #### How to Fork
 [Back to Top](#table_of_contents)
 
@@ -249,17 +263,18 @@ Please see [TESTING.md](TESTING.MD) for all testing performed
 [Back to Top](#table_of_contents)
 
  ### Credits
+ The views and templates used in the project are taken from [How to create a booking system for a health-clinic](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78) and amended to the creation of the survey. 
+ From [I think therefore i blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) I learnt the scope of what is avaliable through django.
+
+
  [Back to Top](#table_of_contents)
 
 #### Code Used
 
+- [How to create a booking system for a health-clinic](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78) and amended to the creation of the survey. 
 - [I think therefore i Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/) - Introduction to Django walkthrough.
 - [Dev Genuis](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)- Help with designing the booking system.
 - [CSE Stack](https://www.csestack.org/create-html-form-insert-data-database-django/#Step_4_Create_Form_to_Take_the_User_Input) Creating a form in Django
-- [Simple is better than Complex](https://simpleisbetterthancomplex.com/tutorial/2019/01/03/how-to-use-date-picker-with-django.html) How to use a date picker in Django
-- [Codemy.com](https://www.youtube.com/watch?v=6-XXvUENY_8)-Style Django Forms With Bootstrap - Django Blog #5.
-- [Djangoproject](https://docs.djangoproject.com/en/4.2/topics/email/)- Sending email through Django.
-- [geeksforgeeks](https://www.geeksforgeeks.org/setup-sending-email-in-django-project/) - Tutorial for sending emails in a Django project.
 - [QuestionPro](https://www.questionpro.com/blog/health-survey/#:~:text=A%20health%20survey%20is%20a,a%20community%20acts%20towards%20health.)Sample information on a health survey.
 - [mdnweb docs](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/) - Used for details on the Authorisation and Forms 
 
