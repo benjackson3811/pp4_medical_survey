@@ -152,27 +152,65 @@ Section where the user goes to create an appointment. As this is an MVP there is
 
 ### Secondary Online Submit 
 
+Secondary section on online booking where the user defines a time for the appointment.
+
 ![Appointment Submit](/static/images/readme_images/Add_appointment.png)
+
+### Staff panel 
+
+List of appointments made
 
 ![Staff Panel](/static/images/readme_images/staff%20panel.png)
 
+### User Panel
+
+Details of User and the appointments they have made.
+
+Unfixed bug - First name and last name on the user infor section.
+
 ![user Panel](/static/images/readme_images/user%20panel.png)
+
+### Edit Appointment
+
+MVP section to edit an appointment. Only provides the functionality to change the status of the patient recruited and the day of the appoint
 
 ![user Update](/static/images/readme_images/edit%20appointment%201.png)
 
+### Edit Appointment Confirmation Notifcation
+
+Message notifcation that the appointment has been updated
+
 ![user update submit](/static/images/readme_images/appointment%20edit%20confirmation.png)
+
+### Unable to edit appointment notifcation
+
+The message notifcation that shows if trying to amend an appointment in less than 24 hours.
 
 ![user update submit notification](/static/images/readme_images/edit%20appointment%20notification.png)
 
-![user appointment update confirmation](/static/images/readme_images/appointment%20edit%20confirmation.png)
+### Sign In
+
+The User sign section
 
 ![sign in](/static/images/readme_images/sign%20in.png)
 
+### Successful Sign In
+
 ![SIgn in Successfullu](/static/images/readme_images/sign%20in%20success.png)
+
+### Log In
+
+Log in Section
 
 ![login](/static/images/readme_images/login.png)
 
 ## Future Features
+
+- bug fixes 
+- search patients
+- adding extra fields to data input
+- improved serach functions
+- email notifcations
 
 
 ## Languages and libraries used
@@ -268,9 +306,24 @@ The languages used in this project are:
 [Back to Top](#table_of_contents)
 
 #### How to Fork
+
+- Clone the repo. ...
+- Create a branch using the git subtree command for the folder only. ...
+- Add the newly created repo as a remote. ...
+- Push the subtree to the new repository. ...
+- Fetch all remote branches in the new repository.
+
 [Back to Top](#table_of_contents)
 
 #### How to Clone
+- On GitHub.com-, navigate to the main page of the repository.
+- Above the list of files, click Code.
+- To clone and open the repository with GitHub Desktop, click Open with GitHub Desktop.
+- Follow the prompts in GitHub Desktop to complete the clone.
+
+![how to clone](/static/images/readme_images/how%20to%20clone%20.png)
+
+
 [Back to Top](#table_of_contents)
 
 ### Testing 
