@@ -120,26 +120,6 @@
 
 [Back to Top](#page_contents)
 
- ## Additional Testing
-[Back to Top](#page_contents)
-
-In addition to tests stated above I have performed a series of manual tests. Below the list of tests that has been conducted can be found.
-
-| Status | **Home Page - User Logged Out**
-|:-------:|:--------|
-
-| Status | **Main Website - User Logged In**
-|:-------:|:--------|
-
-| Status | **Main Website - Admin Logged In**
-|:-------:|:--------|
-
- Status | **Create A Patient  - User Logged In**
-|:-------:|:--------|
-
-Status | **Create A New User - User Logged Out**
-|:-------:|:--------|
-
 ### Automated Testing
 None were completed
 
@@ -148,13 +128,15 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 
 | Desktop    | Display <1280px       | Display >1280px    |
 |------------|-----------------------|--------------------|
-| Render     |                   |                |
-| Images     |                   |                |
-| Links      |                   |                |
+| Render     |           x        |         x        |
+| Images     |           x        |          x      |
+| Links      |           x        |           x     |
 
 ### Browser Compatibility
 
-### Lighthouse
+Tested on google, ning and IOS - all loading successfully.
+
+
 
 ### WAVE
 
@@ -168,14 +150,13 @@ https://stackoverflow.com/questions/38936573/django-python-tried-to-update-field
  [Back to Top](#page_contents)
 
  ## Unfixed Bugs
+ 1. appointment search functionalit
+ 2. Appointment list - full_name and pateint_ID not pulling throughg
 
 
  [Back to Top](#page_contents)
 
   ## Code Validation
-- HTML
-- CSS
-- JShint
-- Python linter
+- Not completed due to running out of time
 
 [Back to Top](#page_contents)
